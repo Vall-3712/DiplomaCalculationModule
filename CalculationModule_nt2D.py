@@ -175,7 +175,19 @@ def solve_runge_kutta(k1, gamma_h2, gamma_o2, gamma_h2o, gamma_n2, h, N, output_
                 h * dpGammaH2O_dt(k1, k_opposite, h2, o2, h2o),
             )
     
-    output_file.write(f'{"i":<10} {"t":<10} {"temperature":<13} {"H_sum":<13} {"H2":<13} {"O2":<13} {"H2O":<13} {"H_H2":<13} {"H_O2":<13} {"H_H2O":<13} {"Cp_H2":<13} {"Cp_O2":<13} {"Cp_H2O":<13}  {"S_H2":<13} {"S_O2":<13} {"S_H2OS":<13} {"GammaH2":<10} {"GammaO2":<10} {"GammaH2O":<10} {"Wi_H2":<15} {"Wi_O2":<15} {"Wi_H2O":<15} {"Si_H2":<13} {"Si_O2":<13} {"Si_H2O":<13} {"G_H2":<13} {"G_O2":<13} {"G_H2O":<13} {"k1":<15} {"k_opposite":<13} {"Cp_sum":<13} {"W4":<13}\n')
+    output_file.write(
+        f'{"i":<10} {"t":<10} {"temperature":<13} '
+        f'{"H_sum":<13} {"H2":<13} {"O2":<13} '
+        f'{"H2O":<13} {"H_H2":<13} {"H_O2":<13} '
+        f'{"H_H2O":<13} {"Cp_H2":<13} {"Cp_O2":<13} '
+        f'{"Cp_H2O":<13}  {"S_H2":<13} {"S_O2":<13} '
+        f'{"S_H2OS":<13} {"GammaH2":<10} {"GammaO2":<10} '
+        f'{"GammaH2O":<10} {"Wi_H2":<15} {"Wi_O2":<15} '
+        f'{"Wi_H2O":<15} {"Si_H2":<13} {"Si_O2":<13} '
+        f'{"Si_H2O":<13} {"G_H2":<13} {"G_O2":<13} '
+        f'{"G_H2O":<13} {"k1":<15} {"k_opposite":<13} '
+        f'{"Cp_sum":<13} {"W4":<13}\n'
+    )
 
    # Основной цикл
 
